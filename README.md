@@ -26,6 +26,11 @@
 
 ![image](https://github.com/user-attachments/assets/bf594af7-465c-43c6-b661-f29c9c345305)
 
+## 3-2. 분산 데이터 프로젝션 - CQRS
+- 좌석(seat) 서비스와 인사(hr) 서비스를 참조하는 dashboard 모델
+
+
+
 ## Model
 www.msaez.io/#/188553407/storming/srs
 
