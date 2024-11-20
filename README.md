@@ -7,7 +7,7 @@
 1. 자리의 등록/예약/예약취소/반납 시, 자리의 상태가 변경되어 대쉬보드에 반영된다.
 
 ## 도메인 분석 (이벤트 스토밍)
-![image](https://github.com/user-attachments/assets/bb704881-f2e2-4033-be33-e1320643c49b)
+![image](https://github.com/user-attachments/assets/20b020fc-31ad-41a5-8d86-996ab45d9064)
 
 ## Model
 www.msaez.io/#/188553407/storming/srs
