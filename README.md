@@ -18,7 +18,13 @@
 1. seat : 8083
 1. hr : 8084
 1. dashboard : 8085
+
+![image](https://github.com/user-attachments/assets/7d20cd49-7cb7-4377-952d-5b33e35459b1)
+
 ## 3-1. 단일 진입점 - Gateway
+- gateway 마이크로 서비스 실행
+
+
 
 ## Model
 www.msaez.io/#/188553407/storming/srs
