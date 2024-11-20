@@ -1,0 +1,228 @@
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reserve
+  labels:
+    app: reserve
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reserve
+  template:
+    metadata:
+      labels:
+        app: reserve
+    spec:
+      containers:
+        - name: reserve
+          image: username/reserve:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: seat
+  labels:
+    app: seat
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: seat
+  template:
+    metadata:
+      labels:
+        app: seat
+    spec:
+      containers:
+        - name: seat
+          image: username/seat:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hr
+  labels:
+    app: hr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hr
+  template:
+    metadata:
+      labels:
+        app: hr
+    spec:
+      containers:
+        - name: hr
+          image: username/hr:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dashboard
+  labels:
+    app: dashboard
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dashboard
+  template:
+    metadata:
+      labels:
+        app: dashboard
+    spec:
+      containers:
+        - name: dashboard
+          image: username/dashboard:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: reserve
+  labels:
+    app: reserve
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: reserve
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: seat
+  labels:
+    app: seat
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: seat
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: hr
+  labels:
+    app: hr
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: hr
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: dashboard
+  labels:
+    app: dashboard
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: dashboard
+
