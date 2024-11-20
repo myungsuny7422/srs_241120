@@ -24,6 +24,7 @@
 ## 3-1. 단일 진입점 - Gateway
 - 기동된 예약서비스(8082, reserve) 와 gateway(8088) 를 통한 서비스 호출
 
+![image](https://github.com/user-attachments/assets/bf594af7-465c-43c6-b661-f29c9c345305)
 
 ## Model
 www.msaez.io/#/188553407/storming/srs
