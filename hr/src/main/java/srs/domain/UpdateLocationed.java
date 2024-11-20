@@ -12,6 +12,9 @@ import srs.infra.AbstractEvent;
 public class UpdateLocationed extends AbstractEvent {
 
     private Long id;
+    private Integer employeeId;
+    private Integer locationId;
+    private String locationName;
 
     public UpdateLocationed(Hr aggregate) {
         super(aggregate);

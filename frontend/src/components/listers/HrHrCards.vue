@@ -104,6 +104,9 @@
             me.values = temp.data._embedded.hrs;
             
             me.newValue = {
+                'employeeId': 0,
+                'locationId': 0,
+                'locationName': '',
             }
         },
         methods:{

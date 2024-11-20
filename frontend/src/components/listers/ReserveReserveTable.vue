@@ -67,6 +67,7 @@
             headers: 
                 [
                     { text: "id", value: "id" },
+                    { text: "employeeId", value: "employeeId" },
                 ],
             reserve : [],
             newValue: {},
@@ -84,6 +85,7 @@
             this.values = temp.data._embedded.reserves;
 
             this.newValue = {
+                'employeeId': '',
             }
         },
         methods: {

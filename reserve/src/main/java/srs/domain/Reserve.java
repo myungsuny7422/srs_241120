@@ -20,6 +20,8 @@ public class Reserve {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String employeeId;
+
     @PostPersist
     public void onPostPersist() {
         ReservePlaced reservePlaced = new ReservePlaced(this);

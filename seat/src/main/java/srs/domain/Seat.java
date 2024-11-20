@@ -20,11 +20,22 @@ public class Seat {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private String seatName;
+
+    private Boolean reservedYn;
+
+    private Integer reservedEmployeeId;
+
+    private Date reservedDt;
+
     @PostPersist
     public void onPostPersist() {
         ResigterPlaced resigterPlaced = new ResigterPlaced(this);
         resigterPlaced.publishAfterCommit();
+    }
 
+    @PostUpdate
+    public void onPostUpdate() {
         SeatReserved seatReserved = new SeatReserved(this);
         seatReserved.publishAfterCommit();
 

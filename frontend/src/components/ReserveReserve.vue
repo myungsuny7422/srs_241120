@@ -16,6 +16,7 @@
         </v-card-title >        
 
         <v-card-text style="background-color: white;">
+            <String label="EmployeeId" v-model="value.employeeId" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions style="background-color: white;">

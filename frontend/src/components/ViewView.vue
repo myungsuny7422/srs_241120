@@ -22,6 +22,10 @@
         data: () => ({
             headers: [
                 { text: "id", value: "id" },
+                { text: "seatName", value: "seatName" },
+                { text: "reservedYn", value: "reservedYn" },
+                { text: "reservedEmployeeId", value: "reservedEmployeeId" },
+                { text: "reservedDt", value: "reservedDt" },
             ],
             view : [],
         }),

@@ -15,4 +15,9 @@ public class View {
     @Id
     //@GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
+
+    private String seatName;
+    private Boolean reservedYn;
+    private String reservedEmployeeId;
+    private Date reservedDt;
 }

@@ -12,6 +12,7 @@ import srs.infra.AbstractEvent;
 public class ReserveCancelled extends AbstractEvent {
 
     private Long id;
+    private String employeeId;
 
     public ReserveCancelled(Reserve aggregate) {
         super(aggregate);

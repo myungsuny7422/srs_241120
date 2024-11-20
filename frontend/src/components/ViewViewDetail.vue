@@ -6,6 +6,18 @@
         </v-card-title>
 
         <v-card-text>
+            <div>
+                <String label="SeatName" v-model="item.seatName" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Boolean label="ReservedYn" v-model="item.reservedYn" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="ReservedEmployeeId" v-model="item.reservedEmployeeId" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Date label="ReservedDt" v-model="item.reservedDt" :editMode="editMode" @change="change" />
+            </div>
         </v-card-text>
     </v-card>
 

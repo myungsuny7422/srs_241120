@@ -104,6 +104,10 @@
             me.values = temp.data._embedded.seats;
             
             me.newValue = {
+                'seatName': '',
+                'reservedYn': false,
+                'reservedEmployeeId': 0,
+                'reservedDt': '2024-11-20',
             }
         },
         methods:{

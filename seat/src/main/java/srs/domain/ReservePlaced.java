@@ -10,4 +10,5 @@ import srs.infra.AbstractEvent;
 public class ReservePlaced extends AbstractEvent {
 
     private Long id;
+    private String employeeId;
 }

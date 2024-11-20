@@ -35,15 +35,15 @@ mvn spring-boot:run
 ## Test by API
 - reserve
 ```
- http :8088/reserves id="id" 
+ http :8088/reserves id="id" employeeId="employeeId" 
 ```
 - seat
 ```
- http :8088/seats id="id" 
+ http :8088/seats id="id" seatName="seatName" reservedYn="reservedYN" reservedEmployeeId="reservedEmployeeId" reservedDt="reservedDT" 
 ```
 - hr
 ```
- http :8088/hrs id="id" 
+ http :8088/hrs id="id" employeeId="employeeId" locationId="locationId" locationName="locationName" 
 ```
 - dashboard
 ```

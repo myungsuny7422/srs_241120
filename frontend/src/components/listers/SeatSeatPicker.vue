@@ -14,6 +14,18 @@
                         <v-list-item-content>
                             <v-list-item-title>
                             </v-list-item-title>
+                            <v-list-item-subtitle>
+                                SeatName :  {{item.seatName }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                ReservedYn :  {{item.reservedYn }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                ReservedEmployeeId :  {{item.reservedEmployeeId }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                ReservedDt :  {{item.reservedDt }}
+                            </v-list-item-subtitle>
                         </v-list-item-content>
 
                         <v-list-item-action>
@@ -65,6 +77,14 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     this.$emit('selected', obj);
                 }

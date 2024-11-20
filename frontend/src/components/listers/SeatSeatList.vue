@@ -41,10 +41,18 @@
                     <v-list-item-content>
                         <v-list-item-title style="margin-bottom:10px;">
                             
+                            
+                            
+                            
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ SeatName :  {{data.seatName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ReservedYn :  {{data.reservedYn }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ReservedEmployeeId :  {{data.reservedEmployeeId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ReservedDt :  {{data.reservedDt }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -112,6 +120,10 @@
             this.values = temp.data._embedded.seats;
             
             this.newValue = {
+                'seatName': '',
+                'reservedYn': false,
+                'reservedEmployeeId': 0,
+                'reservedDt': '2024-11-20',
             }
         },
         methods: {

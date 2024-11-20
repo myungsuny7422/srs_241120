@@ -18,8 +18,14 @@ public class Hr {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @PostPersist
-    public void onPostPersist() {
+    private Integer employeeId;
+
+    private Integer locationId;
+
+    private String locationName;
+
+    @PostUpdate
+    public void onPostUpdate() {
         UpdateLocationed updateLocationed = new UpdateLocationed(this);
         updateLocationed.publishAfterCommit();
     }

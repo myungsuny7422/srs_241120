@@ -41,10 +41,16 @@
                     <v-list-item-content>
                         <v-list-item-title style="margin-bottom:10px;">
                             
+                            
+                            
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ EmployeeId :  {{data.employeeId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ LocationId :  {{data.locationId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ LocationName :  {{data.locationName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -112,6 +118,9 @@
             this.values = temp.data._embedded.hrs;
             
             this.newValue = {
+                'employeeId': 0,
+                'locationId': 0,
+                'locationName': '',
             }
         },
         methods: {
