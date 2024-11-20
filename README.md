@@ -36,6 +36,7 @@ mvn spring-boot:run
 - seat
 ```
  http :8088/seats id="id" seatName="seatName" reservedYn="reservedYN" reservedEmployeeId="reservedEmployeeId" reservedDt="reservedDT" 
+ http :8088/ 
 ```
 - hr
 ```

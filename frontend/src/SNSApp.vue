@@ -45,6 +45,17 @@
                         Seat
                     </v-list-item>
 
+                    <v-list-item
+                        class="px-2"
+                        key=""
+                        to="//"
+                        @click="changeUrl()"
+                        color="primary"
+                        style="font-weight:700;"
+                    >
+                        
+                    </v-list-item>
+
 
                     <v-list-item
                         class="px-2"
@@ -154,6 +165,13 @@ export default {
                 description: '', 
                 key: 'seats', 
                 route: '/seats/seats',
+                ImageUrl: '',
+            },
+            { 
+                title: '', 
+                description: '', 
+                key: '', 
+                route: '//',
                 ImageUrl: '',
             },
             { 

@@ -35,7 +35,10 @@ public class Seat {
 
         SeatReserved seatReserved = new SeatReserved(this);
         seatReserved.publishAfterCommit();
+    }
 
+    @PostUpdate
+    public void onPostUpdate() {
         SeatReturned seatReturned = new SeatReturned(this);
         seatReturned.publishAfterCommit();
     }

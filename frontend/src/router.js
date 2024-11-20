@@ -7,6 +7,8 @@ Vue.use(Router);
 
 import SeatSeatManager from "./components/listers/SeatSeatCards"
 import SeatSeatDetail from "./components/listers/SeatSeatDetail"
+import Manager from "./components/listers/Cards"
+import Detail from "./components/listers/Detail"
 
 import HrHrManager from "./components/listers/HrHrCards"
 import HrHrDetail from "./components/listers/HrHrDetail"
@@ -29,6 +31,16 @@ export default new Router({
                 path: '/seats/seats/:id',
                 name: 'SeatSeatDetail',
                 component: SeatSeatDetail
+            },
+            {
+                path: '//',
+                name: 'Manager',
+                component: Manager
+            },
+            {
+                path: '///:id',
+                name: 'Detail',
+                component: Detail
             },
 
             {

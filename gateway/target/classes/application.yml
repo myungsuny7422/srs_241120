@@ -12,17 +12,17 @@ spring:
         - id: seat
           uri: http://localhost:8082
           predicates:
-            - Path=/seats/**, 
+            - Path=/seats/**, /undefined/**, 
         - id: hr
-          uri: http://localhost:8083
+          uri: http://localhost:0
           predicates:
             - Path=/hrs/**, 
         - id: reserve
-          uri: http://localhost:8084
+          uri: http://localhost:0
           predicates:
             - Path=/reserves/**, 
         - id: dashboard
-          uri: http://localhost:8085
+          uri: http://localhost:0
           predicates:
             - Path=, 
         - id: frontend
@@ -52,7 +52,7 @@ spring:
         - id: seat
           uri: http://seat:8080
           predicates:
-            - Path=/seats/**, 
+            - Path=/seats/**, /undefined/**, 
         - id: hr
           uri: http://hr:8080
           predicates:

@@ -6,7 +6,6 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 import srs.HrApplication;
-import srs.domain.UpdateLocationed;
 
 @Entity
 @Table(name = "Hr_table")
@@ -23,12 +22,6 @@ public class Hr {
     private Integer locationId;
 
     private String locationName;
-
-    @PostUpdate
-    public void onPostUpdate() {
-        UpdateLocationed updateLocationed = new UpdateLocationed(this);
-        updateLocationed.publishAfterCommit();
-    }
 
     public static HrRepository repository() {
         HrRepository hrRepository = HrApplication.applicationContext.getBean(
