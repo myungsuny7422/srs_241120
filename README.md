@@ -22,8 +22,7 @@
 ![image](https://github.com/user-attachments/assets/7d20cd49-7cb7-4377-952d-5b33e35459b1)
 
 ## 3-1. 단일 진입점 - Gateway
-- gateway 마이크로 서비스 실행
-
+- 기동된 예약서비스(8082, reserve) 와 gateway(8088) 를 통한 서비스 호출
 
 
 ## Model
