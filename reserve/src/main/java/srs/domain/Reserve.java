@@ -6,9 +6,9 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 import srs.ReserveApplication;
+import srs.domain.ReservReturned;
 import srs.domain.ReserveCancelled;
 import srs.domain.ReservePlaced;
-import srs.domain.ReserveReturned;
 
 @Entity
 @Table(name = "Reserve_table")
@@ -20,19 +20,22 @@ public class Reserve {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String employeeId;
+    private Long employeeId;
 
     @PostPersist
     public void onPostPersist() {
         ReservePlaced reservePlaced = new ReservePlaced(this);
         reservePlaced.publishAfterCommit();
 
-        ReserveReturned reserveReturned = new ReserveReturned(this);
-        reserveReturned.publishAfterCommit();
+        ReservReturned reservReturned = new ReservReturned(this);
+        reservReturned.publishAfterCommit();
 
         ReserveCancelled reserveCancelled = new ReserveCancelled(this);
         reserveCancelled.publishAfterCommit();
     }
+
+    @PreUpdate
+    public void onPreUpdate() {}
 
     public static ReserveRepository repository() {
         ReserveRepository reserveRepository = ReserveApplication.applicationContext.getBean(
@@ -40,5 +43,20 @@ public class Reserve {
         );
         return reserveRepository;
     }
+
+    //<<< Clean Arch / Port Method
+    public void returnReserve() {
+        //implement business logic here:
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public void cancelReserve() {
+        //implement business logic here:
+
+    }
+    //>>> Clean Arch / Port Method
+
 }
 //>>> DDD / Aggregate Root

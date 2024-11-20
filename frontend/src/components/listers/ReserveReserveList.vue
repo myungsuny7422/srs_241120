@@ -114,7 +114,7 @@
             this.values = temp.data._embedded.reserves;
             
             this.newValue = {
-                'employeeId': '',
+                'employeeId': 0,
             }
         },
         methods: {

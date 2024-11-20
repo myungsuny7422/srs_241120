@@ -7,7 +7,7 @@ import srs.infra.AbstractEvent;
 
 @Data
 @ToString
-public class ReserveCancelled extends AbstractEvent {
+public class ReservReturned extends AbstractEvent {
 
     private Long id;
     private Long employeeId;

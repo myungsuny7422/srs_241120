@@ -32,10 +32,7 @@ public class Seat {
     public void onPostPersist() {
         ResigterPlaced resigterPlaced = new ResigterPlaced(this);
         resigterPlaced.publishAfterCommit();
-    }
 
-    @PostUpdate
-    public void onPostUpdate() {
         SeatReserved seatReserved = new SeatReserved(this);
         seatReserved.publishAfterCommit();
 
@@ -75,7 +72,7 @@ public class Seat {
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
-    public static void returnSeat(ReserveReturned reserveReturned) {
+    public static void returnSeat(ReservReturned reservReturned) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -86,7 +83,7 @@ public class Seat {
 
         /** Example 2:  finding and process
         
-        repository().findById(reserveReturned.get???()).ifPresent(seat->{
+        repository().findById(reservReturned.get???()).ifPresent(seat->{
             
             seat // do something
             repository().save(seat);

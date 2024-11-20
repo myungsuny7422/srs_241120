@@ -20,9 +20,9 @@ cd /bin
 ## Run the backend micro-services
 See the README.md files inside the each microservices directory:
 
-- reserve
 - seat
 - hr
+- reserve
 - dashboard
 
 
@@ -33,10 +33,6 @@ mvn spring-boot:run
 ```
 
 ## Test by API
-- reserve
-```
- http :8088/reserves id="id" employeeId="employeeId" 
-```
 - seat
 ```
  http :8088/seats id="id" seatName="seatName" reservedYn="reservedYN" reservedEmployeeId="reservedEmployeeId" reservedDt="reservedDT" 
@@ -44,6 +40,10 @@ mvn spring-boot:run
 - hr
 ```
  http :8088/hrs id="id" employeeId="employeeId" locationId="locationId" locationName="locationName" 
+```
+- reserve
+```
+ http :8088/reserves id="id" employeeId="employeeId" 
 ```
 - dashboard
 ```

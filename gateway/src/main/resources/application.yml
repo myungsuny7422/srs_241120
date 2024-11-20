@@ -9,18 +9,18 @@ spring:
     gateway:
 #<<< API Gateway / Routes
       routes:
-        - id: reserve
-          uri: http://localhost:8082
-          predicates:
-            - Path=/reserves/**, 
         - id: seat
-          uri: http://localhost:8083
+          uri: http://localhost:8082
           predicates:
             - Path=/seats/**, 
         - id: hr
-          uri: http://localhost:8084
+          uri: http://localhost:8083
           predicates:
             - Path=/hrs/**, 
+        - id: reserve
+          uri: http://localhost:8084
+          predicates:
+            - Path=/reserves/**, 
         - id: dashboard
           uri: http://localhost:8085
           predicates:
@@ -49,10 +49,6 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: reserve
-          uri: http://reserve:8080
-          predicates:
-            - Path=/reserves/**, 
         - id: seat
           uri: http://seat:8080
           predicates:
@@ -61,6 +57,10 @@ spring:
           uri: http://hr:8080
           predicates:
             - Path=/hrs/**, 
+        - id: reserve
+          uri: http://reserve:8080
+          predicates:
+            - Path=/reserves/**, 
         - id: dashboard
           uri: http://dashboard:8080
           predicates:

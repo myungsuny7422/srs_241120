@@ -41,14 +41,14 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='ReserveReturned'"
+        condition = "headers['type']=='ReservReturned'"
     )
-    public void wheneverReserveReturned_ReturnSeat(
-        @Payload ReserveReturned reserveReturned
+    public void wheneverReservReturned_ReturnSeat(
+        @Payload ReservReturned reservReturned
     ) {
-        ReserveReturned event = reserveReturned;
+        ReservReturned event = reservReturned;
         System.out.println(
-            "\n\n##### listener ReturnSeat : " + reserveReturned + "\n\n"
+            "\n\n##### listener ReturnSeat : " + reservReturned + "\n\n"
         );
 
         // Sample Logic //

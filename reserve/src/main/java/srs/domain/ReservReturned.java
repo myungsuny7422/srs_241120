@@ -9,15 +9,16 @@ import srs.infra.AbstractEvent;
 //<<< DDD / Domain Event
 @Data
 @ToString
-public class ReserveReturned extends AbstractEvent {
+public class ReservReturned extends AbstractEvent {
 
     private Long id;
+    private Long employeeId;
 
-    public ReserveReturned(Reserve aggregate) {
+    public ReservReturned(Reserve aggregate) {
         super(aggregate);
     }
 
-    public ReserveReturned() {
+    public ReservReturned() {
         super();
     }
 }

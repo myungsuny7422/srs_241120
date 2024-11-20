@@ -16,7 +16,7 @@
         </v-card-title >        
 
         <v-card-text style="background-color: white;">
-            <String label="EmployeeId" v-model="value.employeeId" :editMode="editMode" :inputUI="''"/>
+            <Number label="EmployeeId" v-model="value.employeeId" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions style="background-color: white;">
@@ -35,21 +35,7 @@
                     text
                     @click="save"
                 >
-                    Reserve
-                </v-btn>
-                <v-btn
-                    color="primary"
-                    text
-                    @click="save"
-                >
-                    ReturnReserve
-                </v-btn>
-                <v-btn
-                    color="primary"
-                    text
-                    @click="save"
-                >
-                    CancelReserve
+                    reserve
                 </v-btn>
                 <v-btn
                     color="primary"
@@ -71,6 +57,22 @@
         </v-card-actions>
         <v-card-actions>
             <v-spacer></v-spacer>
+            <v-btn
+                v-if="!editMode"
+                color="primary"
+                text
+                @click="returnReserve"
+            >
+                ReturnReserve
+            </v-btn>
+            <v-btn
+                v-if="!editMode"
+                color="primary"
+                text
+                @click="cancelReserve"
+            >
+                CancelReserve
+            </v-btn>
         </v-card-actions>
 
         <v-snackbar
@@ -204,6 +206,44 @@
             },
             change(){
                 this.$emit('input', this.value);
+            },
+            async returnReserve() {
+                try {
+                    if(!this.offline) {
+                        var temp = await axios.put(axios.fixUrl(this.value._links['returnreserve'].href))
+                        for(var k in temp.data) {
+                            this.value[k]=temp.data[k];
+                        }
+                    }
+
+                    this.editMode = false;
+                } catch(e) {
+                    this.snackbar.status = true
+                    if(e.response && e.response.data.message) {
+                        this.snackbar.text = e.response.data.message
+                    } else {
+                        this.snackbar.text = e
+                    }
+                }
+            },
+            async cancelReserve() {
+                try {
+                    if(!this.offline) {
+                        var temp = await axios.put(axios.fixUrl(this.value._links['cancelreserve'].href))
+                        for(var k in temp.data) {
+                            this.value[k]=temp.data[k];
+                        }
+                    }
+
+                    this.editMode = false;
+                } catch(e) {
+                    this.snackbar.status = true
+                    if(e.response && e.response.data.message) {
+                        this.snackbar.text = e.response.data.message
+                    } else {
+                        this.snackbar.text = e
+                    }
+                }
             },
         },
     }

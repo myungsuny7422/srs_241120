@@ -45,13 +45,9 @@ logging:
     org.hibernate.type: trace
     org.springframework.cloud: debug
 
-api:
-  url: 
-    reserve: localhost:8082 
-    
 
 server:
-  port: 8082
+  port: 8084
 
 ---
 
@@ -85,8 +81,4 @@ spring:
           destination: srs
           contentType: application/json
 
-api:
-  url: 
-    reserve: reserve:8080 
-    
 
