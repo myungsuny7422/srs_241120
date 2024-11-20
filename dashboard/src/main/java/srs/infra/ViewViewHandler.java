@@ -76,7 +76,28 @@ public class ViewViewHandler {
                 // view 객체에 이벤트의 eventDirectValue 를 set 함
                 view.setReservedYn(N);
                 view.setReservedEmployeeId();
-                view.setReservedDt();
+                // view 레파지 토리에 save
+                viewRepository.save(view);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @StreamListener(KafkaProcessor.INPUT)
+    public void whenUpdateLocationed_then_UPDATE_3(
+        @Payload UpdateLocationed updateLocationed
+    ) {
+        try {
+            if (!updateLocationed.validate()) return;
+            // view 객체 조회
+
+            List<View> viewList = viewRepository.findBySeatId(
+                updateLocationed.getId()
+            );
+            for (View view : viewList) {
+                // view 객체에 이벤트의 eventDirectValue 를 set 함
+                view.setReservedYn(Y);
                 // view 레파지 토리에 save
                 viewRepository.save(view);
             }
