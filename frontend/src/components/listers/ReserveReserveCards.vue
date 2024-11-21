@@ -104,7 +104,8 @@
             me.values = temp.data._embedded.reserves;
             
             me.newValue = {
-                'employeeId': 0,
+                'employeeId': '',
+                'seatId': 0,
             }
         },
         methods:{

@@ -87,7 +87,7 @@
             this.values = temp.data._embedded.hrs;
 
             this.newValue = {
-                'employeeId': 0,
+                'employeeId': '',
                 'locationId': 0,
                 'locationName': '',
             }

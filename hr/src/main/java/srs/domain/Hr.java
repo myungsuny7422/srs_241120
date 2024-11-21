@@ -14,10 +14,9 @@ import srs.HrApplication;
 public class Hr {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
 
-    private Integer employeeId;
+    private String employeeId;
 
     private Integer locationId;
 
@@ -31,30 +30,6 @@ public class Hr {
     }
 
     //<<< Clean Arch / Port Method
-    public static void updateLocation(SeatReserved seatReserved) {
-        //implement business logic here:
-
-        /** Example 1:  new item 
-        Hr hr = new Hr();
-        repository().save(hr);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(seatReserved.get???()).ifPresent(hr->{
-            
-            hr // do something
-            repository().save(hr);
-
-
-         });
-        */
-
-    }
-
-    //>>> Clean Arch / Port Method
-    //<<< Clean Arch / Port Method
     public static void updateLocation(SeatReturned seatReturned) {
         //implement business logic here:
 
@@ -67,6 +42,30 @@ public class Hr {
         /** Example 2:  finding and process
         
         repository().findById(seatReturned.get???()).ifPresent(hr->{
+            
+            hr // do something
+            repository().save(hr);
+
+
+         });
+        */
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public static void updateLocation(SeatReserved seatReserved) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Hr hr = new Hr();
+        repository().save(hr);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(seatReserved.get???()).ifPresent(hr->{
             
             hr // do something
             repository().save(hr);

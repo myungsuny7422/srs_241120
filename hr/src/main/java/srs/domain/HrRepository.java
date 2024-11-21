@@ -6,4 +6,4 @@ import srs.domain.*;
 
 //<<< PoEAA / Repository
 @RepositoryRestResource(collectionResourceRel = "hrs", path = "hrs")
-public interface HrRepository extends PagingAndSortingRepository<Hr, Long> {}
+public interface HrRepository extends PagingAndSortingRepository<Hr, Integer> {}

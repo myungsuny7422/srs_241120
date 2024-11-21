@@ -18,9 +18,6 @@ import srs.domain.*;
 public class PolicyHandler {
 
     @Autowired
-    SeatRepository seatRepository;
-
-    @Autowired
     Repository Repository;
 
     @StreamListener(KafkaProcessor.INPUT)

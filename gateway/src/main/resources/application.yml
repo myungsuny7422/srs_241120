@@ -12,7 +12,7 @@ spring:
         - id: seat
           uri: http://localhost:8082
           predicates:
-            - Path=/seats/**, /undefined/**, 
+            - Path=/undefined/**, 
         - id: hr
           uri: http://localhost:0
           predicates:
@@ -20,7 +20,7 @@ spring:
         - id: reserve
           uri: http://localhost:0
           predicates:
-            - Path=/reserves/**, 
+            - Path=/undefined/**, 
         - id: dashboard
           uri: http://localhost:0
           predicates:
@@ -52,7 +52,7 @@ spring:
         - id: seat
           uri: http://seat:8080
           predicates:
-            - Path=/seats/**, /undefined/**, 
+            - Path=/undefined/**, 
         - id: hr
           uri: http://hr:8080
           predicates:
@@ -60,7 +60,7 @@ spring:
         - id: reserve
           uri: http://reserve:8080
           predicates:
-            - Path=/reserves/**, 
+            - Path=/undefined/**, 
         - id: dashboard
           uri: http://dashboard:8080
           predicates:

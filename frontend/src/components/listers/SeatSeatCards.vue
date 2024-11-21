@@ -107,7 +107,7 @@
                 'seatName': '',
                 'reservedYn': false,
                 'reservedEmployeeId': 0,
-                'reservedDt': '2024-11-20',
+                'reservedDt': '2024-11-21',
             }
         },
         methods:{

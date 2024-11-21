@@ -36,17 +36,6 @@
                 <v-list>
                     <v-list-item
                         class="px-2"
-                        key="seats"
-                        to="/seats/seats"
-                        @click="changeUrl()"
-                        color="primary"
-                        style="font-weight:700;"
-                    >
-                        Seat
-                    </v-list-item>
-
-                    <v-list-item
-                        class="px-2"
                         key=""
                         to="//"
                         @click="changeUrl()"
@@ -71,13 +60,13 @@
 
                     <v-list-item
                         class="px-2"
-                        key="reserves"
-                        to="/reserves/reserves"
+                        key=""
+                        to="//"
                         @click="changeUrl()"
                         color="primary"
                         style="font-weight:700;"
                     >
-                        Reserve
+                        
                     </v-list-item>
 
 
@@ -161,13 +150,6 @@ export default {
         ImageUrl: '',
         aggregate: [
             { 
-                title: 'Seat', 
-                description: '', 
-                key: 'seats', 
-                route: '/seats/seats',
-                ImageUrl: '',
-            },
-            { 
                 title: '', 
                 description: '', 
                 key: '', 
@@ -182,10 +164,10 @@ export default {
                 ImageUrl: '',
             },
             { 
-                title: 'Reserve', 
+                title: '', 
                 description: '', 
-                key: 'reserves', 
-                route: '/reserves/reserves',
+                key: '', 
+                route: '//',
                 ImageUrl: '',
             },
             

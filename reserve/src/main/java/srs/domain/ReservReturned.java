@@ -12,7 +12,8 @@ import srs.infra.AbstractEvent;
 public class ReservReturned extends AbstractEvent {
 
     private Long id;
-    private Long employeeId;
+    private String employeeId;
+    private Integer seatId;
 
     public ReservReturned(Reserve aggregate) {
         super(aggregate);

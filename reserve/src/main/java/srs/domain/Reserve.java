@@ -14,10 +14,11 @@ import srs.ReserveApplication;
 public class Reserve {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Integer id;
 
-    private Long employeeId;
+    private String employeeId;
+
+    private Integer seatId;
 
     public static ReserveRepository repository() {
         ReserveRepository reserveRepository = ReserveApplication.applicationContext.getBean(
@@ -25,20 +26,5 @@ public class Reserve {
         );
         return reserveRepository;
     }
-
-    //<<< Clean Arch / Port Method
-    public void returnReserve() {
-        //implement business logic here:
-
-    }
-
-    //>>> Clean Arch / Port Method
-    //<<< Clean Arch / Port Method
-    public void cancelReserve() {
-        //implement business logic here:
-
-    }
-    //>>> Clean Arch / Port Method
-
 }
 //>>> DDD / Aggregate Root

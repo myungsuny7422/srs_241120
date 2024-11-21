@@ -25,22 +25,6 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='SeatReserved'"
-    )
-    public void wheneverSeatReserved_UpdateLocation(
-        @Payload SeatReserved seatReserved
-    ) {
-        SeatReserved event = seatReserved;
-        System.out.println(
-            "\n\n##### listener UpdateLocation : " + seatReserved + "\n\n"
-        );
-
-        // Sample Logic //
-        Hr.updateLocation(event);
-    }
-
-    @StreamListener(
-        value = KafkaProcessor.INPUT,
         condition = "headers['type']=='SeatReturned'"
     )
     public void wheneverSeatReturned_UpdateLocation(
@@ -49,6 +33,22 @@ public class PolicyHandler {
         SeatReturned event = seatReturned;
         System.out.println(
             "\n\n##### listener UpdateLocation : " + seatReturned + "\n\n"
+        );
+
+        // Sample Logic //
+        Hr.updateLocation(event);
+    }
+
+    @StreamListener(
+        value = KafkaProcessor.INPUT,
+        condition = "headers['type']=='SeatReserved'"
+    )
+    public void wheneverSeatReserved_UpdateLocation(
+        @Payload SeatReserved seatReserved
+    ) {
+        SeatReserved event = seatReserved;
+        System.out.println(
+            "\n\n##### listener UpdateLocation : " + seatReserved + "\n\n"
         );
 
         // Sample Logic //

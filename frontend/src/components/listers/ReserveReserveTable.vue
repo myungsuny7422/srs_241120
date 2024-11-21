@@ -68,6 +68,7 @@
                 [
                     { text: "id", value: "id" },
                     { text: "employeeId", value: "employeeId" },
+                    { text: "seatId", value: "seatId" },
                 ],
             reserve : [],
             newValue: {},
@@ -85,7 +86,8 @@
             this.values = temp.data._embedded.reserves;
 
             this.newValue = {
-                'employeeId': 0,
+                'employeeId': '',
+                'seatId': 0,
             }
         },
         methods: {
