@@ -90,7 +90,7 @@
             this.newValue = {
                 'seatName': '',
                 'reservedYn': false,
-                'reservedEmployeeId': 0,
+                'reservedEmployeeId': '',
                 'reservedDt': '2024-11-21',
             }
         },

@@ -37,6 +37,8 @@ public class Hr {
         Hr hr = new Hr();
         repository().save(hr);
 
+        UpdateLocationed updateLocationed = new UpdateLocationed(hr);
+        updateLocationed.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -46,6 +48,8 @@ public class Hr {
             hr // do something
             repository().save(hr);
 
+            UpdateLocationed updateLocationed = new UpdateLocationed(hr);
+            updateLocationed.publishAfterCommit();
 
          });
         */
@@ -61,6 +65,8 @@ public class Hr {
         Hr hr = new Hr();
         repository().save(hr);
 
+        UpdateLocationed updateLocationed = new UpdateLocationed(hr);
+        updateLocationed.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -70,6 +76,8 @@ public class Hr {
             hr // do something
             repository().save(hr);
 
+            UpdateLocationed updateLocationed = new UpdateLocationed(hr);
+            updateLocationed.publishAfterCommit();
 
          });
         */

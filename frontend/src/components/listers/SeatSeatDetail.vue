@@ -12,7 +12,7 @@
                 <Boolean label="ReservedYn" v-model="item.reservedYn" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="ReservedEmployeeId" v-model="item.reservedEmployeeId" :editMode="editMode" @change="change" />
+                <String label="ReservedEmployeeId" v-model="item.reservedEmployeeId" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Date label="ReservedDt" v-model="item.reservedDt" :editMode="editMode" @change="change" />

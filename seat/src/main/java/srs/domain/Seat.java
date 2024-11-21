@@ -20,7 +20,7 @@ public class Seat {
 
     private Boolean reservedYn;
 
-    private Integer reservedEmployeeId;
+    private String reservedEmployeeId;
 
     private Date reservedDt;
 
@@ -39,6 +39,8 @@ public class Seat {
         Seat seat = new Seat();
         repository().save(seat);
 
+        SeatReserved seatReserved = new SeatReserved(seat);
+        seatReserved.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -48,6 +50,8 @@ public class Seat {
             seat // do something
             repository().save(seat);
 
+            SeatReserved seatReserved = new SeatReserved(seat);
+            seatReserved.publishAfterCommit();
 
          });
         */
@@ -63,6 +67,8 @@ public class Seat {
         Seat seat = new Seat();
         repository().save(seat);
 
+        SeatReturned seatReturned = new SeatReturned(seat);
+        seatReturned.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -72,6 +78,8 @@ public class Seat {
             seat // do something
             repository().save(seat);
 
+            SeatReturned seatReturned = new SeatReturned(seat);
+            seatReturned.publishAfterCommit();
 
          });
         */
@@ -87,6 +95,8 @@ public class Seat {
         Seat seat = new Seat();
         repository().save(seat);
 
+        SeatReturned seatReturned = new SeatReturned(seat);
+        seatReturned.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -96,6 +106,8 @@ public class Seat {
             seat // do something
             repository().save(seat);
 
+            SeatReturned seatReturned = new SeatReturned(seat);
+            seatReturned.publishAfterCommit();
 
          });
         */

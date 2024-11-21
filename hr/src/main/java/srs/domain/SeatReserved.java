@@ -9,9 +9,9 @@ import srs.infra.AbstractEvent;
 @ToString
 public class SeatReserved extends AbstractEvent {
 
-    private Long id;
+    private Integer id;
     private String seatName;
     private Boolean reservedYn;
-    private Integer reservedEmployeeId;
+    private String reservedEmployeeId;
     private Date reservedDt;
 }

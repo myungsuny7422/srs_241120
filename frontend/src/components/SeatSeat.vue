@@ -18,7 +18,7 @@
         <v-card-text style="background-color: white;">
             <String label="SeatName" v-model="value.seatName" :editMode="editMode" :inputUI="''"/>
             <Boolean label="ReservedYn" v-model="value.reservedYn" :editMode="editMode" :inputUI="''"/>
-            <Number label="ReservedEmployeeId" v-model="value.reservedEmployeeId" :editMode="editMode" :inputUI="''"/>
+            <String label="ReservedEmployeeId" v-model="value.reservedEmployeeId" :editMode="editMode" :inputUI="''"/>
             <Date label="ReservedDt" v-model="value.reservedDt" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 

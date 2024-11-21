@@ -8,9 +8,9 @@ import srs.infra.AbstractEvent;
 @Data
 public class ResigterPlaced extends AbstractEvent {
 
-    private Long id;
+    private Integer id;
     private String seatName;
     private Boolean reservedYN;
-    private Integer reservedEmployeeId;
+    private String reservedEmployeeId;
     private Date reservedDT;
 }
