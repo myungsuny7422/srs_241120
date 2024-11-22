@@ -30,10 +30,3 @@
 - 좌석(seat) 서비스와 인사(hr) 서비스를 참조하는 dashboard 모델
 
 ![image](https://github.com/user-attachments/assets/02c593b9-7f8c-40ce-99de-fe6add4666a4)
-
-## Model
-www.msaez.io/#/188553407/storming/srs
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-sudo mv /tmp/eksctl /usr/local/bin
-```
-
